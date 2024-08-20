@@ -46,7 +46,8 @@ export default defineUserConfig({
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: {
       '/':[
-        'test.md',
+        '/',
+        'test.md', // 他會自己讀取md的H1作為連結標題耶
       ],
     },
   }),

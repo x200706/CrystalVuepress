@@ -44,7 +44,9 @@ export default defineUserConfig({
     ],
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
-    sidebar,
+    sidebar: [
+      '/'
+    ],
   }),
 
   // Replace footer

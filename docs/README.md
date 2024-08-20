@@ -1,4 +1,1 @@
----
-home: true
----
 # ForbiddenMagic

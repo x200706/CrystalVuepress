@@ -13,11 +13,11 @@ import { description } from "../../package.json";
 const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
-  lang: "en-US",
+  lang: "zh-TW",
   // Global title in HTML <head>.
   // If page has title (in frontmatter) or h1 then: <page title/h1> | <global title>
   // e.g <title>Vuepress-DecapCMS-Netlify | VueDN</title>
-  title: "VueDN",
+  title: "ForbiddenMagic",
   // Global description in in HTML <head>.
   // If page has description (in frontmatter) then: <global description is replaced by <page description>
   // <meta name="description" content="...">
@@ -33,8 +33,8 @@ export default defineUserConfig({
 
   // theme and its config
   theme: defaultTheme({
-    logo: "vue.png",
-    notFound: ["There's nothing here. If you're looking for DecapCMS, manually enter `/admin` to the root site path to navigate directly to it."],
+    logo: "feather.png",
+    notFound: ["查無路徑"],
     navbar: [
       {
         text: "ForbiddenMagic",
@@ -45,7 +45,17 @@ export default defineUserConfig({
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: [
-      '/'
+      {
+        '/':[
+          {
+            text: '首頁',
+            children: [
+              '/',
+              '/test.md',
+            ],
+          },
+        ],
+      }
     ],
   }),
 

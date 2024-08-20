@@ -13,3 +13,63 @@
 .spaced {
   padding-bottom: 1rem;
 }
+
+html.dark {
+  --c-brand: #b2a5e5;
+  --c-brand-light: #b2a5e5;
+  --c-bg: #22272e;
+  --c-bg-light: #2b313a;
+  --c-bg-lighter: #262c34;
+  --c-bg-dark: #343b44;
+  --c-bg-darker: #37404c;
+  --c-text: #adbac7;
+  --c-text-light: #96a7b7;
+  --c-text-lighter: #8b9eb0;
+  --c-text-lightest: #8094a8;
+  --c-border: #3e4c5a;
+  --c-border-dark: #34404c;
+  --c-tip: #b2a5e5;
+  --c-warning: #e0ad15;
+  --c-warning-bg: #2d2f2d;
+  --c-warning-bg-light: #423e2a;
+  --c-warning-bg-lighter: #44442f;
+  --c-warning-border-dark: #957c35;
+  --c-warning-details-bg: #39392d;
+  --c-warning-title: #fdca31;
+  --c-warning-text: #d8d96d;
+  --c-warning-text-accent: #ffbf00;
+  --c-warning-text-light: #ddb84b;
+  --c-warning-text-quote: #ccab49;
+  --c-danger: #fc1e38;
+  --c-danger-bg: #39232c;
+  --c-danger-bg-light: #4b2b35;
+  --c-danger-bg-lighter: #553040;
+  --c-danger-border-dark: #a25151;
+  --c-danger-details-bg: #482936;
+  --c-danger-title: #fc2d3b;
+  --c-danger-text: #ea9ca0;
+  --c-danger-text-accent: #fd3636;
+  --c-danger-text-light: #d9777c;
+  --c-danger-text-quote: #d56b6b;
+  --c-details-bg: #323843;
+  --c-badge-warning: var(--c-warning);
+  --c-badge-warning-text: #3c2e05;
+  --c-badge-danger: var(--c-danger);
+  --c-badge-danger-text: #401416;
+  --code-hl-bg-color: #363b46;
+}
+:root {
+  --back-to-top-z-index: 5;
+  --back-to-top-color: #b2a5e5;
+  --back-to-top-color-hover: #b2a5e5;
+}
+:root {
+  --search-bg-color: #ffffff;
+  --search-accent-color: #b2a5e5;
+  --search-text-color: #2c3e50;
+  --search-border-color: #eaecef;
+  --search-item-text-color: #5d81a5;
+  --search-item-focus-bg-color: #f3f4f5;
+  --search-input-width: 8rem;
+  --search-result-width: 20rem;
+}

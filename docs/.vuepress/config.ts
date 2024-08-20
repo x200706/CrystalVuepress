@@ -44,10 +44,11 @@ export default defineUserConfig({
     ],
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
-    sidebar: [
-      ['page/test.md', '第一頁'],
-      '/',
-    ],
+    sidebar: {
+      '/':[
+        'test.md',
+      ],
+    },
   }),
 
   // Replace footer

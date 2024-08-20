@@ -37,29 +37,14 @@ export default defineUserConfig({
     notFound: ["There's nothing here. If you're looking for DecapCMS, manually enter `/admin` to the root site path to navigate directly to it."],
     navbar: [
       {
-        text: "Songs",
+        text: "ForbiddenMagic",
         // notice the trailing / (for the automatic next and prev links based on the sidebar)
-        link: "/songs/",
-      },
-      {
-        text: "Using this template",
-        link: "/template/",
-      },
-      {
-        text: "GitHub",
-        link: "https://github.com/NdagiStanley/VueDN",
+        link: "/",
       },
     ],
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
-    sidebar: {
-      "/songs": [
-        {
-          text: "Songs",
-          children: songFiles,
-        },
-      ],
-    },
+    sidebar,
   }),
 
   // Replace footer

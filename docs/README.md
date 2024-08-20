@@ -1,4 +1,4 @@
 ---
 home: true
 ---
-首頁
+# ForbiddenMagic

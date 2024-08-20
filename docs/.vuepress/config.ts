@@ -4,8 +4,8 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { getDirname, path } from "@vuepress/utils";
 import { glob } from "glob";
 
-let songFiles = glob
-  .sync("docs/songs/**/*.md")
+let pageFiles = glob
+  .sync("docs/page/**/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
 
 import { description } from "../../package.json";
@@ -33,9 +33,9 @@ export default defineUserConfig({
 
   // theme and its config
   theme: defaultTheme({
-    logo: "feather.png",
+    logo: "feather.png", // 側欄上方logo
     notFound: ["查無路徑"],
-    navbar: [
+    navbar: [ // 頭頂欄
       {
         text: "ForbiddenMagic",
         // notice the trailing / (for the automatic next and prev links based on the sidebar)
@@ -44,10 +44,12 @@ export default defineUserConfig({
     ],
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
-    sidebar: {
-      '/':[
-        '/',
-        'test.md', // 他會自己讀取md的H1作為連結標題耶
+    sidebar: { // 側欄
+      '/': [
+        {
+          text: "文章",
+          children: pageFiles,
+        },
       ],
     },
   }),

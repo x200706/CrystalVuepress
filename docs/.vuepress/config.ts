@@ -45,17 +45,8 @@ export default defineUserConfig({
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: [
-      {
-        '/':[
-          {
-            text: '首頁',
-            children: [
-              '/',
-              '/test.md',
-            ],
-          },
-        ],
-      }
+      '/',
+      ['/test.md', '第一頁']
     ],
   }),
 

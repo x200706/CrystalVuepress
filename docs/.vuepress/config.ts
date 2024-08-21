@@ -4,8 +4,12 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { getDirname, path } from "@vuepress/utils";
 import { glob } from "glob";
 
-let pageFiles = glob
-  .sync("docs/page/**/*.md")
+// 自動收錄目錄內文章
+let frontEndFiles = glob
+  .sync("docs/page/Front-end/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let javaFiles = glob
+  .sync("docs/page/Java/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
 
 import { description } from "../../package.json";
@@ -47,8 +51,12 @@ export default defineUserConfig({
     sidebar: { // 側欄
       '/': [
         {
-          text: "文章",
-          children: pageFiles,
+          text: "Java",
+          children: javaFiles,
+        },
+        {
+          text: "Front-end",
+          children: frontEndFiles,
         },
       ],
     },

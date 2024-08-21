@@ -5,11 +5,41 @@ import { getDirname, path } from "@vuepress/utils";
 import { glob } from "glob";
 
 // 自動收錄目錄內文章
+let javaFiles = glob
+  .sync("docs/page/Java/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let pythonFiles = glob
+  .sync("docs/page/Python/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let phpFiles = glob
+  .sync("docs/page/PHP-Laravel/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
 let frontEndFiles = glob
   .sync("docs/page/Front-end/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
-let javaFiles = glob
-  .sync("docs/page/Java/*.md")
+let linuxFiles = glob
+  .sync("docs/page/Linux/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let dbFiles = glob
+  .sync("docs/page/Database/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let containerFiles = glob
+  .sync("docs/page/Container/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let cloudFiles = glob
+  .sync("docs/page/Cloud-Host/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let toolsFiles = glob
+  .sync("docs/page/Tools/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let projectFiles = glob
+  .sync("docs/page/SideProject/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let otherFiles = glob
+  .sync("docs/page/Other/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+let thisSiteFiles = glob
+  .sync("docs/page/ThisSite/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
 
 import { description } from "../../package.json";
@@ -49,14 +79,54 @@ export default defineUserConfig({
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: { // 側欄
-      '/': [
+      '/': [ //TODO 這樣寫太土味了，改成用個function串入uniArr跟對應的txxxFiles（也是arr）包裝後回傳
         {
           text: "Java",
           children: javaFiles,
         },
         {
+          text: "Python",
+          children: pythonFiles,
+        },
+        {
+          text: "PHP&Laravel",
+          children: phpFiles,
+        },
+        {
           text: "Front-end",
           children: frontEndFiles,
+        },
+        {
+          text: "Linux",
+          children: linuxFiles,
+        },
+        {
+          text: "Database",
+          children: dbFiles,
+        },
+        {
+          text: "Container",
+          children: containerFiles,
+        },
+        {
+          text: "Cloud&Host",
+          children: cloudFiles,
+        },
+        {
+          text: "Tools",
+          children: toolsFiles,
+        },
+        {
+          text: "Side Project",
+          children: projectFiles,
+        },
+        {
+          text: "Other",
+          children: otherFiles,
+        },
+        {
+          text: "本站事務",
+          children: thisSiteFiles,
         },
       ],
     },

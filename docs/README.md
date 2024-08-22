@@ -3,5 +3,5 @@
 遇到的問題或過程筆記
 
 其他不足以成一篇的內容，會收錄在線上書籤中：
-- [實用工具Bookmark](https://raindrop.io/x200706/a-25573978)
 - [DevBookmark](https://raindrop.io/x200706/dev-bookmark-44430469)
+- [實用工具Bookmark](https://raindrop.io/x200706/-25573978)

@@ -2,7 +2,6 @@ import { defaultTheme, defineUserConfig } from "vuepress";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { getDirname, path } from "@vuepress/utils";
-import { prismjsPlugin } from '@vuepress/plugin-prismjs'
 import { glob } from "glob";
 
 // 自動收錄目錄內文章
@@ -181,10 +180,6 @@ export default defineUserConfig({
     searchPlugin({
       // options
       // Default shortcut is key '/'
-    }),
-    prismjsPlugin({
-      // options
-      theme: 'coldark-dark',
     }),
   ],
 });

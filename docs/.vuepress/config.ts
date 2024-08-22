@@ -82,50 +82,62 @@ export default defineUserConfig({
       '/': [ //TODO 這樣寫太土味了，改成用個function串入uniArr跟對應的txxxFiles（也是arr）包裝後回傳
         {
           text: "Java",
+          collapsable: true,
           children: javaFiles,
         },
         {
           text: "Python",
+          collapsable: true,
           children: pythonFiles,
         },
         {
           text: "PHP&Laravel",
+          collapsable: true,
           children: phpFiles,
         },
         {
           text: "Front-end",
+          collapsable: true,
           children: frontEndFiles,
         },
         {
           text: "Linux",
+          collapsable: true,
           children: linuxFiles,
         },
         {
           text: "Database",
+          collapsable: true,
           children: dbFiles,
         },
         {
           text: "Container",
+          collapsable: true,
           children: containerFiles,
         },
         {
           text: "Cloud&Host",
+          collapsable: true,
           children: cloudFiles,
         },
         {
           text: "Tools",
+          collapsable: true,
           children: toolsFiles,
         },
         {
           text: "Side Project",
+          collapsable: true,
           children: projectFiles,
         },
         {
           text: "Other",
+          collapsable: true,
           children: otherFiles,
         },
         {
           text: "本站事務",
+          collapsable: true,
           children: thisSiteFiles,
         },
       ],

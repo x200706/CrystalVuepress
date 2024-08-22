@@ -1,4 +1,5 @@
-﻿Keycloak的官方REST API有些小缺點，第一個是文件未免也太...不過這點頭過身體過
+﻿# 20240821 Keycloak SPI開發步驟.md
+Keycloak的官方REST API有些小缺點，第一個是文件未免也太...不過這點頭過身體過
 
 另一點是它的回應很隨興，可以理解成或許是有資安考量，但收到類似「未知的例外」描述還寫請人去查看Keycloak log感覺太過了（尤其是以串接方不一定是Keycloak維護者的角度）
 
@@ -65,6 +66,10 @@ public class MyRealmResourceProviderFactory implements RealmResourceProviderFact
   @Override
   public String getId() {
     return "myApi"; // 這個之後會反映在網址path上
+  }
+
+  @Override
+  public void close() {
   }
 
 }

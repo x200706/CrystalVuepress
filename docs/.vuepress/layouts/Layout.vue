@@ -15,7 +15,7 @@ onMounted(() => {
   <ParentLayout>
     <template #page-bottom>
       <CustomFooter />
+      <div class="elfsight-app-9ded2d07-fa35-442c-87e5-01e3da5a5c57" data-elfsight-app-lazy></div>
     </template>
-    <div class="elfsight-app-9ded2d07-fa35-442c-87e5-01e3da5a5c57" data-elfsight-app-lazy></div>
   </ParentLayout>
 </template>

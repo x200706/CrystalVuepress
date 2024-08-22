@@ -2,9 +2,13 @@ import { defaultTheme, defineUserConfig } from "vuepress";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { getDirname, path } from "@vuepress/utils";
+import { prismjsPlugin } from '@vuepress/plugin-prismjs'
 import { glob } from "glob";
 
 // 自動收錄目錄內文章
+let journalFiles = glob
+  .sync("docs/journal/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
 let javaFiles = glob
   .sync("docs/page/Java/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
@@ -63,6 +67,7 @@ export default defineUserConfig({
         src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
       },
     ],
+    ['link', { rel: 'icon', href: `/feather.png` }],
   ],
 
   // theme and its config
@@ -71,14 +76,28 @@ export default defineUserConfig({
     notFound: ["查無路徑"],
     navbar: [ // 頭頂欄
       {
-        text: "ForbiddenMagic",
+        text: "數位生活&程式學習",
         // notice the trailing / (for the automatic next and prev links based on the sidebar)
         link: "/",
+      },
+      {
+        text: "心情日記",
+        link: "/journal",
+      },
+      {
+        text: "About",
+        link: "/about.md",
       },
     ],
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: { // 側欄
+      '/journal':[
+        {
+          text: "心情日記",
+          children: journalFiles,
+        },
+      ],
       '/': [ //TODO 這樣寫太土味了，改成用個function串入uniArr跟對應的txxxFiles（也是arr）包裝後回傳
         {
           text: "Java",
@@ -162,6 +181,10 @@ export default defineUserConfig({
     searchPlugin({
       // options
       // Default shortcut is key '/'
+    }),
+    prismjsPlugin({
+      // options
+      theme: 'coldark-dark',
     }),
   ],
 });

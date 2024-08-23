@@ -458,3 +458,8 @@ html.dark {
 .back-to-top {
   margin-bottom: 50px;
 }
+
+/*不再開放切換亮暗...*/
+.toggle-color-mode-button {
+   display: none;
+}

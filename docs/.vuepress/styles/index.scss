@@ -57,7 +57,7 @@ html.dark {
   --c-badge-danger: var(--c-danger);
   --c-badge-danger-text: #401416;
   --code-hl-bg-color: #363b46;
-  --code-bg-color: #24293e;
+  --code-bg-color: #212740;
 }
 :root {
   --back-to-top-z-index: 5;
@@ -462,4 +462,9 @@ html.dark {
 /*不再開放切換亮暗...*/
 .toggle-color-mode-button {
    display: none;
+}
+
+code {
+   color: #91B5FF;
+   background-color: var(--code-bg-color);
 }

@@ -146,6 +146,9 @@ html.dark {
  .token.tag .token.punctuation {
     color: #6c98e3; /* Tag Names */
  }
+ .token.tag, .token.attr-name, .token.namespace, .token.deleted {
+  color: #91b5ff;
+}
  
  .token.attr-name,
  .token.boolean,
@@ -370,6 +373,16 @@ html.dark {
  .command-line .command-line-prompt > span:before {
     color: #6860c3da; /* Comments */
  }
+
+ .theme-default-content pre code,.theme-default-content pre[class*=language-] code {
+  color: #91b5ff;
+  padding: 0;
+  background-color: transparent!important;
+  border-radius: 0;
+  overflow-wrap: unset;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto
+}
 
 /*亮色模式*/
  :root {

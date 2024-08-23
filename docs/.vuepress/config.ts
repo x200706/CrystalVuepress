@@ -44,6 +44,9 @@ let otherFiles = glob
 let thisSiteFiles = glob
   .sync("docs/page/ThisSite/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
+let gitFiles = glob
+  .sync("docs/page/Git/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
 
 import { description } from "../../package.json";
 
@@ -122,6 +125,11 @@ export default defineUserConfig({
           text: "Linux",
           collapsible: true,
           children: linuxFiles,
+        },
+        {
+          text: "Git",
+          collapsible: true,
+          children: gitFiles,
         },
         {
           text: "Database",

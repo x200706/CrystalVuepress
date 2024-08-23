@@ -4,7 +4,7 @@ tags:
   - Stream
   - Java
 ---
-# 20240823 Java Stream流怎麼被關閉了（內含Keycloak GroupProvider坑）
+# 20240823 Java Stream流怎麼被關閉了（內含Keycloak UserProvider坑）
 > 前提：我們都知道了，Stream一但被用完，就沒了
 
 有天為了開發Keycloak SPI，寫了這樣的代碼

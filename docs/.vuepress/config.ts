@@ -93,7 +93,7 @@ export default defineUserConfig({
     sidebar: { // 側欄
       '/journal':[
         {
-          text: "心情日記",
+          text: "心情札記",
           children: journalFiles,
         },
       ],

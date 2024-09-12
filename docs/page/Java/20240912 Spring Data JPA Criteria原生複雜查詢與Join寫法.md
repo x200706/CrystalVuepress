@@ -2,7 +2,7 @@
 tags:
   - JPA
 ---
-
+# 20240912 Spring Data JPA Criteria原生複雜查詢與Join寫法
 若基於各種原因（系統穩定度或其他考量），不想給Spring Boot安裝QueryDSL，
 
 其實Criteria就有內建複雜查詢的功能，不用再回去寫JPQL

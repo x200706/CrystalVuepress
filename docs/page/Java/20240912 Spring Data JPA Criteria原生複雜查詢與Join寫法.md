@@ -57,10 +57,7 @@ List<XxxPO> xxxPO = XxxDAO.findAll(spec);
               <Y> Path<Y> get(String attributeName);
           ```
 
-- 有些人不會`return query.getRestriction();`，而是`return builder.and(predicates.toArray(new Predicate[0]));`
-
-    - 後者比較靈活點或許還能拼接其他條件吧，前者就是只能拿到已經設置的條件
-
+- 有些人是先`query.where(builder.and(predicates.toArray(new Predicate[0])));`再`return query.getRestriction();`，有些人是簡化成`return builder.and(predicates.toArray(new Predicate[0]));`
 - builder就是CriteriaBuilder，query就來自builder，root來自query，如果不用Specification寫法會長這樣
 
     - 

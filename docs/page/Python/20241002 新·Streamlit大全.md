@@ -16,8 +16,7 @@ Streamlit是一款基於Python可以迅速產生網頁的工具，並支援各�
 
 `config.toml`的檔案內容
 
-```
-//toml
+```toml
 [theme]
 # Primary accent for interactive elements
 primaryColor = '#719c4c'
@@ -45,7 +44,6 @@ font = "sans serif"
 在Streamlit主程式 看要調用還是寫在main（這樣代碼不太好看...）
 
 ```python
-//python
 # 頁面CSS（有些樣式被toml設定檔優先使用，不能從這邊覆蓋）
 st.markdown('<style>\
 .st-emotion-cache-1dp5vir {\
@@ -63,7 +61,6 @@ z-index: 999990;\
 ### 其他常用頁面布局－主框<!-- {"collapsed":true} -->
 
 ```python
-//python
 # 頁面標題跟寬度設定
 st.set_page_config(page_title="蛇蛇工具箱🐍", layout="wide")
 
@@ -79,7 +76,6 @@ with st.sidebar:
 ### 其他常用頁面布局－內頁
 
 ```python
-//python
 if menu == "功能1":
     st.title("功能1的內頁大標題")
     st.subheader("功能1的內頁次標題0")
@@ -122,7 +118,6 @@ if menu == "功能1":
 ### st與Pandas<!-- {"collapsed":true} -->
 
 ```python
-//python
 st.session_state.df = pd.read_csv(file_path) # 存放你的df
 st.dataframe(df)
 ```

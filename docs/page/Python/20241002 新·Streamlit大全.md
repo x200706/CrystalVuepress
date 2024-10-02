@@ -130,9 +130,8 @@ st.dataframe(df)
 
 GCP或其他VM自架的跟電腦差不多就跳過；PythonAnywhere有申請但還沒真的用過OAO
 
-| | | | |
-|-|-|-|-|
 |平台→<br />↓項目<!-- {"cell":{"colwidth":191}} -->|insCode|Streamlit|Google Colab|
+|-|-|-|-|
 |基礎<!-- {"cell":{"colwidth":191}} -->|一個Linux容器，可以運行右邊兩者|一個有限的Linux容器，主要用來運行Streamlit|一個有限的Linux容器，主要用來運行Jupyter Notebook|
 |編輯區<br />是否好用<!-- {"cell":{"colwidth":191}} -->|中規中矩但目前沒有深色模式|部署完後可在GitHub儲藏庫按`.`進入線上VSCode，<br />具體來說是個網頁應用程式...所以沒有固定IDE|中規中矩，可以跟Markdown混寫；有若干種深色模式|
 |Linux終端機的使用&<br />安裝Linux套件的自由度<br />（撇除解壓縮等神操作）<!-- {"cell":{"colwidth":191}} -->|有個終端機工具可以用，但不能用root執行；nix上有的大多能安裝|只能到APP看運行狀況（或許能用Python執行套件）；使用`package.txt`安裝，但某些套件抓不到（例如中文語言包...），比較驚奇的是據說連jre都能裝？！|也是只能看運行結果；可以用`!`連接Linux指令，自由度算高|

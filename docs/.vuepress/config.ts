@@ -83,8 +83,8 @@ export default defineUserConfig({
         link: "/",
       },
       {
-        text: "心情日記",
-        link: "/journal",
+        text: "生活誌",
+        link: "https://x200706.exblog.jp/",
       },
       {
         text: "About",
@@ -94,12 +94,6 @@ export default defineUserConfig({
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: { // 側欄
-      '/journal':[
-        {
-          text: "心情札記",
-          children: journalFiles,
-        },
-      ],
       '/': [ //TODO 這樣寫太土味了，改成用個function串入uniArr跟對應的txxxFiles（也是arr）包裝後回傳
         {
           text: "Java",
